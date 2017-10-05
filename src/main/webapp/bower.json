@@ -1,0 +1,17 @@
+{
+  "name": "moj_facebook",
+  "authors": [
+    "lukasszymaniuk6191@gmail.com"
+  ],
+  "description": "moj fecebook",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
