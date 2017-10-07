@@ -25,25 +25,10 @@ public class UserLoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		
-		  /*
-		  StringBuilder sb = new StringBuilder();
-	      BufferedReader br = request.getReader();
-	      String str = null;
-	      while ((str = br.readLine()) != null) {
-	          sb.append(str);
-	      }
-	      JSONObject jObj = new JSONObject(sb.toString());
-	      
-	      String login = jObj.getString("login");
-	      String password = jObj.getString("password");
-		  */
 	      
 		  String login = request.getParameter("my_login");
 		  String password = request.getParameter("my_password");
-		  
-		  
-		  
-	      System.out.println("Login: "+login+", Password: "+password);
+
 	      
 	      boolean canILogIn = userRepository.passwordAndLoginAreValid(login, password);
 	      
@@ -55,7 +40,7 @@ public class UserLoginServlet extends HttpServlet {
 	      {
 	    	  request.getRequestDispatcher("html/login_error_page.jsp").include(request,response);
 	      }
-	      //response.sendRedirect(response.encodeRedirectURL("login_page.jsp"));
+
 	      
 	      
 	      

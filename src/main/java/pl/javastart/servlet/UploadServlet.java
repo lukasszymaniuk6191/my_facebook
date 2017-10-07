@@ -37,7 +37,7 @@ public class UploadServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        // gets absolute path of the web application
+
  
     	String appPath = "/home/lszym/Pulpit/Java/nowy_eclipse/projekty/moj_facebook";
     	String savePath =  appPath + File.separator + "src" + File.separator + "main" + File.separator + "webapp" + File.separator + SAVE_DIR;
@@ -47,10 +47,6 @@ public class UploadServlet extends HttpServlet {
         if (!fileSaveDir.exists()) {
             fileSaveDir.mkdir();
         }
-        
-        //UserPhotos userPhotos = new UserPhotos();
-        //String login = (String) request.getAttribute("login");
-        //String password = request.getParameter("password");
         
         HttpSession httpSession = request.getSession();
         String login = (String) httpSession.getAttribute("login");
@@ -68,9 +64,6 @@ public class UploadServlet extends HttpServlet {
             part.write(savePath + File.separator + fileName);
         }
         
-        //request.getRequestDispatcher("html/login_page.jsp").include(request,response);
-        //request.setAttribute("message", "Upload has been done successfully!");
-        //getServletContext().getRequestDispatcher("/message.jsp").forward(request, response);
     }
     /**
      * Extracts file name from HTTP header content-disposition

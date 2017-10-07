@@ -66,7 +66,6 @@ public class User implements Serializable {
 		this.userRole = null;
 		this.userBirthday = null;
 		this.sex = sex;
-		//this.userPhotos = null;
 	}
 
 
@@ -176,19 +175,6 @@ public class User implements Serializable {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-
-
-/*
-	public List<UserPhotos> getUserPhotos() {
-		return userPhotos;
-	}
-
-
-
-	public void setUserPhotos(List<UserPhotos> userPhotos) {
-		this.userPhotos = userPhotos;
-	}
-*/
 
 
 	@Override

@@ -68,19 +68,9 @@ public class UserRepository {
         userPhotosList.setParameter("password", password);
         userPhotosList.setParameter("path", path);
         List<UserPhotos> photosList = userPhotosList.getResultList();
-    	
-        /*
-        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-        System.out.println(photosList.size());
-        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-        */
+
         UserPhotos userPhotos = photosList.get(0);
-        
-        /*
-        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-        System.out.println(userPhotos.toString());
-        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-        */
+      
     	return userPhotos;
     }
     
